@@ -8,7 +8,6 @@ def register(username,password,filename="credentials.txt"):
 def login(username,password,filename="credentials.txt"):
     with open(filename,'r') as file:
         for line in file:
-            print(line)
             if ':' in line:
                 stored_username,stored_password = line.strip().split(':',1)
             if (stored_username == username and stored_password == password) :
